@@ -1,0 +1,604 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-image {
+  height: 80%;
+}
+
+.appear {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.fadeable {
+  opacity: 1;
+}
+
+.droppable {
+  height: 100vh !important;
+}
+
+.rotate180 {
+  transform: rotate(0.25turn);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0.5rem);
+  }
+  50% {
+    transform: translate(0, -1rem);
+  }
+  100% {
+    transform: translate(0, 0.5rem);
+  }
+}
+@keyframes slide {
+  100% {
+    left: 100%;
+  }
+}
+.bubble-1 {
+  height: 35rem;
+  width: 35rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../media/img/book.jpg");
+  background-size: cover;
+  border-radius: 100%;
+  padding: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  gap: 0.4rem;
+  animation-name: float;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.bubble__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5rem;
+  color: #B9EDDD;
+  font-weight: bold;
+  transition: all 1s;
+  text-shadow: 5px 5px black;
+}
+.bubble__title::before {
+  content: "“";
+  float: right;
+  font-size: 20rem;
+  font-family: arial;
+  color: #B9EDDD;
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+  position: absolute;
+  bottom: 15rem;
+  left: 0;
+}
+.bubble__text {
+  display: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
+.navbar {
+  width: 100%;
+  height: 10rem;
+  background-color: #F0F0F0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 0;
+  transition: height 1s;
+}
+.navbar__content {
+  height: 8rem;
+  width: 100%;
+  padding: 0.5rem 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0;
+  margin-bottom: 1rem;
+}
+.navbar__logo {
+  height: 100%;
+}
+.navbar__hamburger {
+  transition: transform 0.75s;
+}
+
+.nav {
+  display: none;
+  width: 100%;
+  transition-property: display;
+  transition-delay: 0.2s;
+  transition-duration: 0.7s;
+  transition-timing-function: linear;
+}
+.nav__item {
+  height: max-content;
+  width: 100%;
+  padding: 0.5rem;
+}
+.nav__link {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: none;
+  color: black;
+}
+.nav__link:active {
+  background-color: #D8D8D8;
+  color: grey;
+}
+.nav__disabled {
+  background-color: grey;
+}
+
+.main__title {
+  font-weight: bolder;
+  font-size: 10rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: -7px -7px #FE0604, 7px 7px #1DFFFF;
+}
+.main__divide {
+  height: 3rem;
+  background-color: #B9EDDD;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0 0.1rem;
+  overflow: hidden;
+}
+.main__divide__slide {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0;
+  position: relative;
+  left: -25rem;
+  animation-name: slide;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.main__divide__text {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+.main__divide__img {
+  height: 100%;
+}
+.main__cardboard {
+  width: 90%;
+  border-radius: 30px;
+  gap: 0;
+  background-color: #F0F0F0;
+  overflow: hidden;
+}
+.main__cardboard__content {
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+  background-color: #F0F0F0;
+  transition: all 1.5s;
+}
+.main__cardboard:hover > .main__cardboard__content {
+  opacity: 1;
+  padding: 1.5rem;
+  max-height: 30rem;
+}
+.main__cardboard__title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 0;
+  background-size: cover;
+  background-position: center center;
+  height: 10rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  color: #B9EDDD;
+  font-weight: bold;
+  text-shadow: 7px 7px black;
+}
+.main__cardboard__text {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem !important;
+}
+.main__foot-img {
+  padding: 0.2rem;
+  font-style: italic;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0.3rem);
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+.footer {
+  background-color: #F0F0F0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 2rem;
+}
+.footer__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+}
+.footer__social {
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.5rem;
+}
+.footer__icon {
+  height: 100%;
+}
+
+.personal {
+  position: relative;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0;
+  height: 40rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../media/img/mexico-city.jpg");
+  background-position: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.summary {
+  display: grid;
+  grid-template-areas: "quote" "music" "videogames" "aside" "community" "blog";
+  place-items: center;
+  place-content: center;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.quote {
+  grid-area: quote;
+}
+
+.music {
+  grid-area: music;
+}
+.music__title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../media/img/music.jpg");
+}
+
+.videogames {
+  grid-area: videogames;
+}
+.videogames__title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../media/img/resident-evil-train.jpg");
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.community {
+  grid-area: community;
+}
+.community__title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../media/img/community.jpg");
+}
+
+.blog {
+  grid-area: blog;
+}
+.blog__title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../media/img/writing.jpg");
+}
+
+.com {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-areas: "title" "divide" "option" "posts" "aside";
+  gap: 0;
+}
+.com__title {
+  grid-area: title;
+}
+.com__social {
+  height: 5rem;
+}
+
+.board-community {
+  grid-area: title;
+  position: relative;
+  height: 50rem;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgb(0, 0, 0) 70%), url("../media/img/rainworld.webp");
+  background-position: cover;
+}
+.board-community h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 7rem;
+  color: #B9EDDD;
+  font-weight: bold;
+  text-shadow: 7px 7px black;
+}
+.board-community span {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  color: #B9EDDD;
+  font-weight: bold;
+}
+.board-community__container {
+  height: 20rem;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-end;
+  gap: 0.5rem;
+}
+.board-community__container__box {
+  opacity: 0.1;
+  height: 7rem;
+  width: 7rem;
+  object-fit: cover;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+.board-community__container__box:hover {
+  border: 0px;
+  opacity: 1;
+}
+
+.community-divide {
+  grid-area: divide;
+}
+
+.option {
+  grid-area: option;
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem 3rem;
+  background-color: #F0F0F0;
+  padding: 2rem 4rem;
+}
+.option__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  color: #B9EDDD;
+  font-weight: bold;
+  text-shadow: 5px 5px black;
+}
+.option label {
+  font-size: 2rem;
+}
+.option input {
+  transform: scale(2);
+}
+
+/* posts */
+.posts {
+  /* box modelling */
+  padding: 1rem;
+  height: max-content;
+  /* grid */
+  grid-area: posts;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-auto-flow: row;
+  gap: 2rem;
+}
+.posts__title {
+  grid-area: title;
+}
+.posts__social {
+  height: 5rem;
+}
+.posts__post {
+  /* box modelling */
+  padding: 3rem;
+  background-color: #E4DCCF;
+  border-radius: 20px;
+  /* grid */
+  display: grid;
+  grid-template-areas: "img user ." "title title title" "cont cont sources" "topic . .";
+  gap: 0.4rem;
+  /*post*/
+}
+.posts__post__user-img {
+  height: 6rem;
+  border-radius: 100%;
+  grid-area: img;
+}
+.posts__post__user-name {
+  grid-area: user;
+}
+.posts__post__title {
+  text-align: center;
+  grid-area: title;
+}
+.posts__post__content {
+  text-align: justify;
+  grid-area: cont;
+}
+.posts__post__topic {
+  grid-area: topic;
+}
+.posts__post__sources {
+  grid-area: sources;
+}
+
+.ranks {
+  grid-area: aside;
+  width: 100%;
+}
+.ranks__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 2rem;
+}
+
+.vid {
+  margin-top: 10rem;
+  grid-template-areas: "title" "divide" "videogame" "videogame" "gallery" "videogame2" "videogame2";
+}
+
+.board-videogames {
+  grid-area: title;
+  position: relative;
+  height: 50rem;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 80%), url("../media/img/halo.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.board-videogames__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 8rem;
+  color: #B9EDDD;
+  font-weight: bold;
+  text-shadow: 7px 7px black;
+}
+.board-videogames__text {
+  font-family: "Nunito", sans-serif;
+  font-size: 3rem;
+  color: white;
+  font-weight: normal;
+}
+
+.videogames-divide {
+  grid-area: divide;
+}
+
+.games {
+  width: 100%;
+}
+.games__game {
+  width: 100%;
+  height: 60rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+.games__game__image {
+  width: 40%;
+  height: 100%;
+}
+.games__game__image img {
+  object-fit: contain;
+  transition: all 1s;
+}
+.games__game__content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+.games__game__title {
+  height: 7rem;
+  object-fit: contain;
+  text-align: center;
+  transition: all 1s;
+}
+.games__game__text {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2.3rem;
+  color: white;
+  font-weight: normal;
+}
+.games__game:hover > .games__game__image > img {
+  transform: scale(1.03);
+}
+.games__game:hover img {
+  transform: scale(1.1);
+}
+.games .resident {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 80%), url("../media/img/resident-game.jpg");
+}
+.games .god {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 80%), url("../media/img/god-of-war-ambient.webp");
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,85 @@
+@use '../util' as *;
+
+.personal{
+    position: relative;
+    margin-top: 10rem;
+    @include flex(row, nowrap, center, center, center,
+        0);
+    height: 40rem;
+
+    //background
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), 
+    rgba(0, 0, 0, 0.25)), url("../media/img/mexico-city.jpg");
+    background-position: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    
+}
+
+.summary{
+    //grid
+    display: grid;
+    grid-template-areas:
+    "quote"
+    "music"
+    "videogames"
+    "aside"
+    "community"
+    "blog";
+    place-items: center;
+    place-content: center;
+
+    gap: 3rem;
+
+    padding: 3rem;
+    
+
+}
+
+.quote{
+    grid-area: quote;
+}
+
+.music{
+    grid-area: music;
+
+    
+
+    &__title{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("../media/img/music.jpg");
+    }
+}
+
+.videogames{
+    grid-area: videogames;
+
+    &__title{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("../media/img/resident-evil-train.jpg");
+    }
+}
+
+.aside{
+    grid-area: aside;
+
+}
+
+.community{
+    grid-area: community;
+
+    &__title{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("../media/img/community.jpg");
+    }
+}
+
+.blog{
+    grid-area: blog;
+
+    &__title{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("../media/img/writing.jpg");
+    }
+}

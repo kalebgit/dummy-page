@@ -1,0 +1,16 @@
+.appear{
+    display: block !important; 
+    opacity: 1 !important;
+}
+
+.fadeable{
+    opacity: 1;
+}
+
+.droppable{
+    height: 100vh !important;
+}
+
+.rotate180{
+    transform: rotate(.25turn);
+}

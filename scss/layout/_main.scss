@@ -1,0 +1,120 @@
+@use '../util/' as *;
+@use '../animation' as *;
+
+.main{
+
+    &__title{
+        font-weight: bolder;
+        font-size: 10rem;
+        font-family: 'Dancing Script', cursive;
+
+        //shadow
+        text-shadow: -7px -7px #FE0604, 
+            7px 7px #1DFFFF;
+    }
+
+    &__divide{
+        // box model
+        height: 3rem;
+        background-color: #B9EDDD;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 0 .1rem;
+
+        
+        overflow: hidden;
+
+        &__slide{
+            height: 100%;
+            // flex
+            @include flex(row, nowrap, flex-start, 
+            flex-start, flex-start, 0);
+            position: relative;
+            left: -25rem;
+            animation-name: slide;
+            animation-delay: 0s;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            
+        }
+
+        &__text{
+            //text
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+
+        &__img{
+            height: 100%;
+        }
+        
+    }
+
+    &__cardboard{
+        width: 90%;
+        border-radius: 30px;
+        gap: 0;
+        background-color: #F0F0F0;
+        overflow: hidden;
+
+        &__content{
+            opacity: 0;
+            overflow: hidden;
+            max-height: 0;
+            
+            
+            background-color: #F0F0F0;
+            transition: all 1.5s;
+        }
+
+        &:hover > &__content{
+            opacity: 1;
+            padding: 1.5rem;
+            max-height: 30rem;
+        }
+
+        &__title{
+            //flex 
+            @include flex(column, nowrap, center, center,
+            flex-start, 0);
+            background-size: cover;
+            background-position: center center;
+
+            height: 10rem;
+            
+
+            //text
+            @include title(5rem);
+            text-shadow: 7px 7px black;
+        }
+
+        &__text{
+            font-family: 'Nunito', sans-serif;
+            font-size: 2rem !important;
+        }
+    }
+
+    &__foot-img{
+        //padding
+        padding: .2rem;
+
+        //text
+        font-style: italic;
+        font-size: 1rem;
+        
+        //background
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(.3rem);
+
+        //position
+        position: absolute;
+        right: .5rem;
+        bottom: .5rem;
+    }
+
+    
+    
+
+    
+}

@@ -1,0 +1,48 @@
+@use '../util/' as *;
+@use '../animation' as *;
+
+.bubble-1{
+    @include bubble(35rem, "../media/img/book.jpg");
+    
+}
+
+.bubble{
+
+
+    &__title{
+        @include title(3.5rem);
+
+        transition: all 1s;
+
+        text-shadow: 5px 5px black;
+
+        &::before{
+            content: "\201C";
+            float:right;
+            
+            font-size: 20rem;
+            font-family: arial;
+            color: #B9EDDD;
+
+            text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+                1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+
+            // position
+            position: absolute;
+            bottom: 15rem;
+            left: 0;
+        }
+    }
+
+    &__text{
+        display: none;
+
+        //text
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+                1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+    }
+}

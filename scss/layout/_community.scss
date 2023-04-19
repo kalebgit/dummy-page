@@ -1,0 +1,180 @@
+@use '../util' as *;
+
+.com{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "divide"
+    "option"
+    "posts"
+    "aside";
+    gap: 0;
+
+
+    &__title {
+        grid-area: title;
+    }
+    &__social {
+        height: 5rem;
+    }
+}
+
+.board-community{
+    
+    grid-area: title;
+    position: relative;
+    height: 50rem;
+    padding: 5rem 2rem;
+    
+
+    //flex
+    @include flex(column, nowrap, space-between, center,
+        center, 0);
+
+    //background
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, 
+    rgba(0, 0, 0, 1) 70%), url("../media/img/rainworld.webp");
+    background-position: cover;
+
+    h2{
+        @include title(7rem);
+        text-shadow: 7px 7px black;
+    }
+
+    span{
+        font-family: 'Nunito', sans-serif;
+        font-size: 2rem;
+        color: #B9EDDD;
+        font-weight: bold;
+    }
+
+    &__container{
+        @include box-container(20rem, 100%, .5rem, .5rem);
+
+        &__box{
+            opacity: .1;
+            height: 7rem;
+            width: 7rem;
+
+            //img
+            object-fit: cover;
+            border-radius: 100%;
+
+            //transition
+            transition: all .5s ease;
+
+            &:hover{
+                border: 0px;
+                opacity: 1;
+            }
+
+        }
+    }
+}
+
+.community-divide{
+    grid-area: divide;
+}
+
+.option {
+    grid-area: option;
+  /* flexbox */
+    @include flex(row, wrap, flex-start, flex-start, 
+    flex-start, 1rem 3rem);
+
+    //box model
+    background-color: #F0F0F0;
+    padding: 2rem 4rem;
+    
+
+    &__title{
+        @include title(5rem);
+        text-shadow: 5px 5px black;
+    }
+
+    label{
+        font-size: 2rem;
+    }
+
+    input{
+        transform: scale(2);
+    }
+}
+
+/* posts */
+.posts {
+  /* box modelling */
+    padding: 1rem;
+    height: max-content;
+  /* grid */
+    grid-area: posts;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-auto-flow: row;
+    gap: 2rem;
+
+    &__title {
+        grid-area: title;
+    }
+    &__social {
+        height: 5rem;
+    }
+
+    &__post {
+        /* box modelling */
+        padding: 3rem;
+        background-color: #E4DCCF;
+        border-radius: 20px;
+    
+        /* grid */
+        display: grid;
+        grid-template-areas: "img user ." 
+        "title title title" 
+        "cont cont sources" 
+        "topic . .";
+        gap: 0.4rem;
+    
+        /*post*/
+        &__user-img {
+            height: 6rem;
+            border-radius: 100%;
+            grid-area: img;
+        }
+        
+        &__user-name {
+            grid-area: user;
+        }
+    
+        &__title {
+            text-align: center;
+            grid-area: title;
+        }
+        
+        &__content {
+            text-align: justify;
+            grid-area: cont;
+        }
+        
+        &__topic {
+            grid-area: topic;
+        }
+    
+        &__sources{
+            grid-area: sources;
+        }
+    }
+}
+
+.ranks {
+    grid-area: aside;
+    
+    //box model
+    width: 100%;
+
+    &__content{
+        //flex 
+        @include flex(row, wrap, flex-start, flex-start,
+        flex-start, 2rem);
+    }
+}

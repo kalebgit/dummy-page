@@ -1,0 +1,23 @@
+@keyframes float{
+    0%{
+        transform: translate(0, .5rem);
+    }
+
+    50%{
+        transform: translate(0, -1rem);
+    }
+
+    100%{
+        transform: translate(0, .5rem);
+    }
+}
+
+@keyframes slide{
+    0%{
+        
+    }
+
+    100%{
+        left: 100%;
+    }
+}
