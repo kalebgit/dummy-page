@@ -1,9 +1,18 @@
-function iniciar(){
-    document.querySelector("#hamburger").addEventListener('click', 
-hamburger, false);
+var minecraftImage = document.querySelector(".minecraft__image");
 
-    document.querySelector("#bubble-1").addEventListener('click',
-    changeBubble, false);
+function iniciar(){
+    try{
+        document.querySelector("#hamburger").addEventListener('click', 
+        hamburger, false);
+
+        document.querySelector("#bubble-1").addEventListener('click',
+        changeBubble, false);
+    }
+
+    catch{
+
+    }
+    
 }
 
 window.addEventListener('load', iniciar, false);

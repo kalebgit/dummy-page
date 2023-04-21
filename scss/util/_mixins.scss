@@ -66,3 +66,12 @@ $align-content, $gap){
     
 }
 
+//img above
+
+@mixin absolute-image($height, $width){
+    position: absolute;
+    height: $height;
+    width: $width;
+    object-fit: contain;
+}
+
