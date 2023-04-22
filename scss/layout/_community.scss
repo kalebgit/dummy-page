@@ -89,7 +89,7 @@
     
 
     &__title{
-        @include title(5rem);
+        @include title(6rem);
         text-shadow: 5px 5px black;
     }
 
@@ -102,67 +102,203 @@
     }
 }
 
-/* posts */
-.posts {
-  /* box modelling */
-    padding: 1rem;
-    height: max-content;
-  /* grid */
-    grid-area: posts;
-    display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(30rem, 1fr));
-    grid-auto-flow: row;
-    gap: 2rem;
+.posts{
+    width: 100%;
+    @include flex(row, wrap, flex-start, flex-start, flex-start,
+        0);
 
-    &__title {
-        grid-area: title;
-    }
-    &__social {
-        height: 5rem;
-    }
+    @include background-image("../media/img/geek.jpg", rgba(0, 0, 0, 0.4));
 
-    &__post {
-        /* box modelling */
-        padding: 3rem;
-        background-color: #E4DCCF;
-        border-radius: 20px;
-    
-        /* grid */
-        display: grid;
-        grid-template-areas: "img user ." 
-        "title title title" 
-        "cont cont sources" 
-        "topic . .";
-        gap: 0.4rem;
-    
-        /*post*/
-        &__user-img {
-            height: 6rem;
-            border-radius: 100%;
-            grid-area: img;
+    &__post{
+        height: 60rem;
+        width: 20%;
+
+        border: 1px solid white;
+        //flex
+        @include flex(row, nowrap, flex-start, flex-start,
+            flex-start, 0);
+        overflow: hidden;
+
+        &--library{
+            @include background-image("../media/img/library.jpg",
+                rgba(0, 0, 0, 0.7));
+        }
+
+        &--pets{
+            @include background-image("../media/img/pets.jpeg",
+                rgba(0, 0, 0, 0.7));
+        }
+
+        &--games{
+            @include background-image("../media/img/videogames.jpeg",
+                rgba(0, 0, 0, 0.7));
+        }
+
+        &--movies{
+            @include background-image("../media/img/movies.webp",
+                rgba(0, 0, 0, 0.7));
+        }
+
+        &--code{
+            @include background-image("../media/img/code.jpeg",
+                rgba(0, 0, 0, 0.7));
+        }
+
+        
+
+        transition-property: all;
+        transition-delay: 1s;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+
+        &__vertical{
+            padding: 2rem;
+            height: 100%;
+            width: 12.25rem;
+            @include flex(column, nowrap, flex-start, center,
+                center, 2rem);
+
+            
+
+            &__img{
+                //box model
+                width: 9rem;
+                height: 9rem;
+                border-radius: 100%;
+                overflow: hidden;
+                object-fit: cover;
+
+            }
+
+            &__topics{
+                @include flex(column, nowrap, center, center,
+                    center, 1rem);
+
+                &__img{
+                    width: 5rem;
+                    object-fit: contain;
+                }
+            }
+
+            &__text{
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 1.5rem;
+                color: white;
+                transition: all 1s;
+            }
+
+            &__sources{
+                display: none;
+                opacity: 0;
+
+                transition-property: display;
+                transition-delay: 1s;
+                transition-duration: .1s;
+
+                transition-property: opacity;
+                transition-delay: 1.2s;
+                transition-duration: 1s;
+                transition-timing-function: ease;
+
+                //box model
+                padding: 1rem;
+
+                //flex
+                @include flex(column, nowrap, flex-start, center,
+                    center, 1rem);
+
+                &__src{
+                    height: 5rem;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &__content{
+            height: 0;
+            width: 100%;
+            overflow: hidden;
+            
+            
+            display: grid;
+            grid-template-areas:
+                "title"
+                "texti"
+                "photos";
+
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(1rem);
+
+            transition-property: height;
+            transition-delay: 0s;
+            transition-duration: .75s;
+            transition-timing-function: ease;
+
+            &__title{
+                grid-area: title;
+                padding: 2rem 4rem;
+                //display: none;
+                opacity: 0;
+                //text
+                @include title(4rem);
+                text-align: center;
+
+                transition-property: opacity;
+                transition-delay: .2s;
+                transition-duration: .5s;
+                transition-timing-function: ease;
+            }
+
+            &__text{
+                grid-area: texti;
+                padding: 2rem 4rem;
+                //display: none;
+                opacity: 0;
+
+                //text
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 2.5rem;
+                color: white;
+
+
+                transition-property: opacity;
+                transition-delay: .2s;
+                transition-duration: .5s;
+                transition-timing-function: ease;
+                
+            }
+
+            &__photos{
+                grid-area: photos;
+            }
+        }
+
+        &:hover{
+            width: 100%;
+            height: 80rem;
+            //order: -1;
         }
         
-        &__user-name {
-            grid-area: user;
+        &:hover &__vertical__text{
+            opacity: 0;
         }
-    
-        &__title {
-            text-align: center;
-            grid-area: title;
+
+        &:hover &__vertical__sources{
+            display: block;
+            opacity: 1;
         }
-        
-        &__content {
-            text-align: justify;
-            grid-area: cont;
+
+        &:hover &__content{
+            height: 100%;
         }
-        
-        &__topic {
-            grid-area: topic;
+
+        &:hover &__content__title{
+            opacity: 1;
         }
-    
-        &__sources{
-            grid-area: sources;
-        }
+
+        &:hover &__content__text{
+            opacity: 1;
+        }   
     }
 }
 

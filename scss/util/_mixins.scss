@@ -75,3 +75,12 @@ $align-content, $gap){
     object-fit: contain;
 }
 
+//background
+
+@mixin background-image($url, $color){
+    background-image: linear-gradient($color, $color),
+            url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

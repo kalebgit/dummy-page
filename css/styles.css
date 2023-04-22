@@ -63,12 +63,16 @@
   animation-timing-function: ease-in-out;
 }
 
+.bubble__content {
+  max-height: 3.5rem;
+  overflow: hidden;
+  transition: all 1s;
+}
 .bubble__title {
   font-family: "Dancing Script", cursive;
   font-size: 3.5rem;
   color: #B9EDDD;
   font-weight: bold;
-  transition: all 1s;
   text-shadow: 5px 5px black;
 }
 .bubble__title::before {
@@ -83,12 +87,19 @@
   left: 0;
 }
 .bubble__text {
-  display: none;
   font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+  opacity: 0;
+  transition: all 1s;
+}
+.bubble:hover .bubble__content {
+  max-height: 100%;
+}
+.bubble:hover .bubble__text {
+  opacity: 1;
 }
 
 .navbar {
@@ -423,7 +434,7 @@
 }
 .option__title {
   font-family: "Dancing Script", cursive;
-  font-size: 5rem;
+  font-size: 6rem;
   color: #B9EDDD;
   font-weight: bold;
   text-shadow: 5px 5px black;
@@ -435,56 +446,183 @@
   transform: scale(2);
 }
 
-/* posts */
 .posts {
-  /* box modelling */
-  padding: 1rem;
-  height: max-content;
-  /* grid */
-  grid-area: posts;
-  display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(30rem, 1fr));
-  grid-auto-flow: row;
-  gap: 2rem;
-}
-.posts__title {
-  grid-area: title;
-}
-.posts__social {
-  height: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../media/img/geek.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .posts__post {
-  /* box modelling */
-  padding: 3rem;
-  background-color: #E4DCCF;
-  border-radius: 20px;
-  /* grid */
-  display: grid;
-  grid-template-areas: "img user ." "title title title" "cont cont sources" "topic . .";
-  gap: 0.4rem;
-  /*post*/
+  height: 60rem;
+  width: 20%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0;
+  overflow: hidden;
+  transition-property: all;
+  transition-delay: 1s;
+  transition-duration: 1s;
+  transition-timing-function: ease;
 }
-.posts__post__user-img {
-  height: 6rem;
+.posts__post--library {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/library.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.posts__post--pets {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/pets.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.posts__post--games {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/videogames.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.posts__post--movies {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/movies.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.posts__post--code {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/code.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.posts__post__vertical {
+  padding: 2rem;
+  height: 100%;
+  width: 12.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+.posts__post__vertical__img {
+  width: 9rem;
+  height: 9rem;
   border-radius: 100%;
-  grid-area: img;
+  overflow: hidden;
+  object-fit: cover;
 }
-.posts__post__user-name {
-  grid-area: user;
+.posts__post__vertical__topics {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
 }
-.posts__post__title {
-  text-align: center;
-  grid-area: title;
+.posts__post__vertical__topics__img {
+  width: 5rem;
+  object-fit: contain;
+}
+.posts__post__vertical__text {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 1s;
+}
+.posts__post__vertical__sources {
+  display: none;
+  opacity: 0;
+  transition-property: display;
+  transition-delay: 1s;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-delay: 1.2s;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+.posts__post__vertical__sources__src {
+  height: 5rem;
+  object-fit: contain;
 }
 .posts__post__content {
-  text-align: justify;
-  grid-area: cont;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "title" "texti" "photos";
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1rem);
+  transition-property: height;
+  transition-delay: 0s;
+  transition-duration: 0.75s;
+  transition-timing-function: ease;
 }
-.posts__post__topic {
-  grid-area: topic;
+.posts__post__content__title {
+  grid-area: title;
+  padding: 2rem 4rem;
+  opacity: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  color: #B9EDDD;
+  font-weight: bold;
+  text-align: center;
+  transition-property: opacity;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 }
-.posts__post__sources {
-  grid-area: sources;
+.posts__post__content__text {
+  grid-area: texti;
+  padding: 2rem 4rem;
+  opacity: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  transition-property: opacity;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.posts__post__content__photos {
+  grid-area: photos;
+}
+.posts__post:hover {
+  width: 100%;
+  height: 80rem;
+}
+.posts__post:hover .posts__post__vertical__text {
+  opacity: 0;
+}
+.posts__post:hover .posts__post__vertical__sources {
+  display: block;
+  opacity: 1;
+}
+.posts__post:hover .posts__post__content {
+  height: 100%;
+}
+.posts__post:hover .posts__post__content__title {
+  opacity: 1;
+}
+.posts__post:hover .posts__post__content__text {
+  opacity: 1;
 }
 
 .ranks {

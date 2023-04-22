@@ -8,11 +8,18 @@
 
 .bubble{
 
+    &__content{
+
+
+        //
+        max-height: 3.5rem;
+        overflow: hidden;
+        transition: all 1s;
+        
+    }
 
     &__title{
         @include title(3.5rem);
-
-        transition: all 1s;
 
         text-shadow: 5px 5px black;
 
@@ -35,7 +42,6 @@
     }
 
     &__text{
-        display: none;
 
         //text
         font-family: 'Nunito', sans-serif;
@@ -44,5 +50,17 @@
         color: white;
         text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
                 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+        
+        //transition
+        opacity: 0;
+        transition: all 1s;
+}
+
+    &:hover &__content{
+        max-height: 100%;
+    }
+
+    &:hover &__text{
+        opacity: 1;
     }
 }
