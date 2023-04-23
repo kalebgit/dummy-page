@@ -93,12 +93,21 @@
         text-shadow: 5px 5px black;
     }
 
+    &__subtitle{
+        font-family: 'Nunito', sans-serif;
+                font-size: 3rem;
+                color: black;
+                font-weight: bold;
+                text-decoration: none;
+    }
+
     label{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     input{
-        transform: scale(2);
+        transform: scale(3) translate(-.3rem, -.3rem);
+
     }
 }
 

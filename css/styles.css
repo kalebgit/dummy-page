@@ -473,11 +473,18 @@
   font-weight: bold;
   text-shadow: 5px 5px black;
 }
+.option__subtitle {
+  font-family: "Nunito", sans-serif;
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
 .option label {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .option input {
-  transform: scale(2);
+  transform: scale(3) translate(-0.3rem, -0.3rem);
 }
 
 .posts {
@@ -881,7 +888,7 @@
 
 .music {
   margin-top: 10rem;
-  grid-template-areas: "board" "events" "aside" "artists";
+  grid-template-areas: "board" "events" "divide" "aside" "artists";
 }
 
 .board-music {
@@ -987,23 +994,23 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-flow: row;
-  grid-auto-rows: 40rem;
+  grid-auto-rows: 70rem;
   gap: 2rem;
 }
 .events__grid__event {
   border-radius: 20px;
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
   gap: 2rem;
 }
 .events__grid__event__title {
   font-family: "Nunito", sans-serif;
-  font-size: 3.5rem;
+  font-size: 5rem;
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -1029,13 +1036,51 @@
   font-size: 2.5rem;
   color: white;
   font-weight: normal;
+  text-align: center;
+}
+.events__grid__event__content__text--small {
+  font-size: 2rem;
+}
+.events__grid__event__content__artists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+}
+.events__grid__event__content__artists__link {
+  display: block;
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.events__grid__event__content__artists__link:hover {
+  transform: scale(1.1);
+}
+.events__grid__event__content__artists__artist {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 100%;
+  object-fit: cover;
+  text-align: center;
 }
 .events__grid__event__content__tickets {
   display: block;
-  background-color: #2192FF;
-  border-radius: 20px;
-  height: 7rem;
-  width: 20rem;
+  background-color: rgb(234, 4, 127);
+  border-radius: 80px;
+  box-shadow: inset 2rem 2rem 2rem rgba(0, 0, 0, 0.1), 2rem 2rem 4rem rgba(234, 4, 127, 0.3), 3rem 1rem 4rem rgba(234, 4, 127, 0.3), inset -1rem -1rem 1rem rgba(255, 255, 255, 0.3);
+  height: 8rem;
+  width: 24rem;
   font-family: "Anton", sans-serif;
   font-size: 2rem;
   text-decoration: none;
@@ -1057,6 +1102,34 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/vive-latino.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+.events__grid__event--vampire {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/world-vampire.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.events__grid__event--lamb {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/lamb-god.png    ");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.events__grid__event--molotov {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/mexico.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.events__grid__event--imagine {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/img/imagine-dragons-ambient.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.playlists {
+  grid-area: aside;
 }
 
 /*# sourceMappingURL=styles.css.map */

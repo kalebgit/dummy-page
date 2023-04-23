@@ -133,9 +133,44 @@
             <section class="events" id="events">
                 <h2 class="events__title">Eventos</h2>
 
+
+                <form class="option">
+                    <legend class="option__subtitle">Ordenar por:</legend>
+                    <label for="order">
+                        <input type="checkbox" name="order" value="all">
+                        Todo
+                    </label>
+    
+                    <label for="order">
+                        <input type="checkbox" name="order" 
+                            value="date">
+                        Fecha
+                    </label>
+    
+                    <label for="order">
+                        <input type="checkbox" name="order" 
+                            value="games">
+                        Lugar
+                    </label>
+    
+                    <label for="order">
+                        <input type="checkbox" name="order" 
+                            value="codes">
+                        Alfabéticamente
+                    </label>
+    
+                    <label for="order">
+                        <input type="checkbox" name="order" 
+                            value="memes">
+                        Relevancia
+                    </label>
+
+                </form>
+
+
                 <div class="events__grid ">
 
-                    <div class="events__grid__event 
+                    <article class="events__grid__event 
                         events__grid__event--vive">
                         <h3 class="events__grid__event__title">
                             Vive Latino
@@ -152,24 +187,79 @@
                                 
                             </p>
 
-                            <p class="events__grid__event__content__text">
-                                Artistas: Red Hot Chili Peppers, 
-                                    Los Bunkers, UB40
-                            </p>
+                            <div class="events__grid__event__content__artists">
 
-                            <a href=""
+                                <a href="https://www.instagram.com/chilipeppers//" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/red-hot-chili-peppers.jpg"
+                                        alt="red hot chili peppers">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Red Hot Chili Peppers
+                                    </p>
+
+                                </a>
+                                
+
+                                <a href="https://www.instagram.com/ub40/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/ub40.jpeg"
+                                        alt="UB40">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        UB40
+                                    </p>
+
+                                </a>
+
+                                
+                                <a href="https://www.instagram.com/losbunkersoficial/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/los-bunkers.jpeg"
+                                        alt="los bunkers">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Los Bunkers
+                                    </p>
+
+                                </a>
+
+                                <a href="https://www.instagram.com/instacvba/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/cafe-tacvba.jpg"
+                                        alt="cafe tacvba">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Cafe Tacvba
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href=""
                             class="events__grid__event__content__tickets">
-                                Compra tus boletos
-                            </a>
-                            
-                        </div>    
-                    </div>
+                                Ir a página oficial
+                        </a>
+                        
+                    </article>
 
 
-                    <div class="events__grid__event 
-                        events__grid__event--vive">
+                    <article class="events__grid__event 
+                        events__grid__event--vampire">
                         <h3 class="events__grid__event__title">
-                            Vive Latino
+                            The world is a vampire
                         </h3>
                         <div class="events__grid__event__content">
 
@@ -183,24 +273,78 @@
                                 
                             </p>
 
-                            <p class="events__grid__event__content__text">
-                                Artistas: Red Hot Chili Peppers, 
-                                    Los Bunkers, UB40
-                            </p>
+                            <div class="events__grid__event__content__artists">
 
-                            <a href=""
+                                <a href="https://www.instagram.com/chilipeppers//" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/smashing-pumpkins.jpg"
+                                        alt="the smashing pumpkins">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        The Smashing Pumpkins
+                                    </p>
+
+                                </a>
+                                
+
+                                <a href="https://www.instagram.com/ub40/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/interpol.webp"
+                                        alt="interpol">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Interpol
+                                    </p>
+
+                                </a>
+
+                                
+                                <a href="https://www.instagram.com/losbunkersoficial/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/the-warning.jpg"
+                                        alt="the warning">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        The warning
+                                    </p>
+
+                                </a>
+
+                                <a href="https://www.instagram.com/instacvba/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/deafheaven.jpeg"
+                                        alt="deafhaven">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Deafhaven
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href=""
                             class="events__grid__event__content__tickets">
-                                Compra tus boletos
-                            </a>
-                            
-                        </div>    
-                    </div>
+                                Ir a página oficial
+                        </a>
+                        
+                    </article>
 
-
-                    <div class="events__grid__event 
-                        events__grid__event--vive">
+                    <article class="events__grid__event 
+                        events__grid__event--lamb">
                         <h3 class="events__grid__event__title">
-                            Vive Latino
+                            Lamb of god
                         </h3>
                         <div class="events__grid__event__content">
 
@@ -214,24 +358,67 @@
                                 
                             </p>
 
-                            <p class="events__grid__event__content__text">
-                                Artistas: Red Hot Chili Peppers, 
-                                    Los Bunkers, UB40
-                            </p>
+                            <div class="events__grid__event__content__artists">
 
-                            <a href=""
+                                <a href="https://www.instagram.com/chilipeppers//" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/lamb-of-god.jpg"
+                                        alt="lamb of god">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Lamb of God
+                                    </p>
+
+                                </a>
+                                
+
+                                <a href="https://www.instagram.com/ub40/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/parkway-drive.jpeg"
+                                        alt="parkway drive">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Parkway drive
+                                    </p>
+
+                                </a>
+
+                                
+                                <a href="https://www.instagram.com/losbunkersoficial/" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/knocked-loose.jpeg"
+                                        alt="knocked loose">
+                                    <p class="events__grid__event__content__text 
+                                        events__grid__event__content__text--small">
+                                        Knocked Loose
+                                    </p>
+
+                                </a>
+
+                            </div>
+                        </div>
+                        
+                        <a href=""
                             class="events__grid__event__content__tickets">
-                                Compra tus boletos
-                            </a>
-                            
-                        </div>    
-                    </div>
+                                Ir a página oficial
+                        </a>
+                        
+                    </article>
 
 
-                    <div class="events__grid__event 
-                        events__grid__event--vive">
+                    <article class="events__grid__event 
+                        events__grid__event--molotov">
                         <h3 class="events__grid__event__title">
-                            Vive Latino
+                            Molotov
                         </h3>
                         <div class="events__grid__event__content">
 
@@ -245,24 +432,35 @@
                                 
                             </p>
 
-                            <p class="events__grid__event__content__text">
-                                Artistas: Red Hot Chili Peppers, 
-                                    Los Bunkers, UB40
-                            </p>
+                            <div class="events__grid__event__content__artists">
 
-                            <a href=""
+                                <a href="https://www.instagram.com/chilipeppers//" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/smashing-pumpkins.jpg"
+                                        alt="Molotov">
+                                    <p class="events__grid__event__content__text">
+                                        Molotov
+                                    </p>
+
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href=""
                             class="events__grid__event__content__tickets">
-                                Compra tus boletos
-                            </a>
-                            
-                        </div>    
-                    </div>
+                                Ir a página oficial
+                        </a>
+                        
+                    </article>
 
 
-                    <div class="events__grid__event 
-                        events__grid__event--vive">
+                    <article class="events__grid__event 
+                        events__grid__event--imagine">
                         <h3 class="events__grid__event__title">
-                            Vive Latino
+                            Imagine Dragons
                         </h3>
                         <div class="events__grid__event__content">
 
@@ -276,21 +474,98 @@
                                 
                             </p>
 
-                            <p class="events__grid__event__content__text">
-                                Artistas: Red Hot Chili Peppers, 
-                                    Los Bunkers, UB40
-                            </p>
+                            <div class="events__grid__event__content__artists">
 
-                            <a href=""
+                                <a href="https://www.instagram.com/chilipeppers//" 
+                                    target="_blank"
+                                    class="events__grid__event__content__artists__link">
+
+                                    <img class="events__grid__event__content__artists__artist"
+                                        src="../media/img/imagine-dragons.jpeg"
+                                        alt="Imagine Dragons">
+                                    <p class="events__grid__event__content__text">
+                                        Imagine Dragons
+                                    </p>
+
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href=""
                             class="events__grid__event__content__tickets">
-                                Compra tus boletos
-                            </a>
-                            
-                        </div>    
-                    </div>
-
+                                Ir a página oficial
+                        </a>
+                        
+                    </article>
+                    
                 </div>
+
+
             </section>
+
+
+            
+
+            <aside class="playlists" id="playlists">
+
+                <div class="main__divide">
+                    <div class="main__divide__slide">
+    
+                        <img src="../media/gif/cuphead.gif" 
+                            alt="cuphead corriendo" 
+                            class="main__divide__img">
+                        <p class="main__divide__text">
+                            Playlists
+                        </p>
+                        <img src="../media/gif/cuphead.gif" 
+                            alt="cuphead corriendo" 
+                            class="main__divide__img">
+    
+                    </div>
+                        
+                </div>
+
+                <iframe
+                src="https://open.spotify.com/embed/playlist/047VdwPEmLrjs8vojt2aaY?utm_source=generator" 
+                width="100%" height="700" frameBorder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"></iframe>
+
+                <iframe
+                src="https://open.spotify.com/embed/playlist/2k1m7wbna2jAIm20ff7X7J?utm_source=generator" 
+                width="100%" height="700" frameBorder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"></iframe>
+
+
+                <div class="main__divide">
+                    <div class="main__divide__slide">
+    
+                        <img src="../media/gif/cuphead.gif" 
+                            alt="cuphead corriendo" 
+                            class="main__divide__img">
+                    
+                        <img src="../media/gif/cuphead.gif" 
+                            alt="cuphead corriendo" 
+                            class="main__divide__img">
+                            
+                        <img src="../media/gif/cuphead.gif" 
+                            alt="cuphead corriendo" 
+                            class="main__divide__img">
+
+                        <img src="../media/gif/cuphead.gif" 
+                            alt="cuphead corriendo" 
+                            class="main__divide__img">
+
+                        <img src="../media/gif/cuphead.gif" 
+                            alt="cuphead corriendo" 
+                            class="main__divide__img">
+    
+                    </div>
+                        
+                </div>
+
+            </aside>
 
             
 
