@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="favicon" href="../media/img/profile.png">
-        <title>Dummy page</title>
+        <link rel="icon" href="../media/img/profile.png">
+        <title>Contacto</title>
 
         <!-- FONTS -->
         <!--dancing script-->
@@ -68,11 +68,11 @@
                             Comunidad
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <!-- <li class="nav__item">
                         <a href="./blog.html" class="nav__link">
                             Blog
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav__item">
                         <a href="./contact.html" class="nav__link">
                             Contacto
@@ -104,9 +104,66 @@
 
         </header>
 
-        <main class="">
+        <main class="cont">
 
-            
+            <form class="cont__feedback">
+                <label for="feedback">
+                    <img class="cont__feedback__image"
+                        src="../media/gif/toad.gif"
+                        alt="toad de mario bros">
+                    
+                    <div class="cont__feedback__button
+                        cont__feedback__button--red"
+                        for="feedback">
+                        <span>Positivo</span>
+                    </div>
+
+                    <input type="radio" name="feedback" value="good">
+                </label>
+
+                <label for="for="feedback">
+                    <img class="cont__feedback__image"
+                        src="../media/gif/street-fighter.gif"
+                        alt="ryu de street fighter">
+
+                    <div class="cont__feedback__button
+                    cont__feedback__button--blue"
+                    for="feedback">
+                        <span>Negativo</span>
+                    </div>
+
+                    <input type="radio" name="feedback" value="bad">
+                </label>
+
+                <label for="feedback">
+                    <img class="cont__feedback__image"
+                        src="../media/gif/mario.gif"
+                        alt="mario">
+
+                    <div class="cont__feedback__button
+                    cont__feedback__button--green"
+                    for="feedback">
+                        <span>Optimizar</span>
+                    </div>
+
+                    <input type="radio" name="feedback" value="fix">
+                </label>
+
+                <label for="feedback">
+                    <img class="cont__feedback__image"
+                        src="../media/gif/teemo.gif"
+                        alt="teemo de league of legends">
+
+                    <div class="cont__feedback__button
+                    cont__feedback__button--purple"
+                    for="feedback">
+                        <span>Trabajo</span>
+                    </div>
+
+                    <input type="radio" name="feedback" value="job">
+                </label>
+
+            </form>
 
         </main>
 
