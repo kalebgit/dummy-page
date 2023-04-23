@@ -41,6 +41,40 @@
     left: 100%;
   }
 }
+@keyframes drop {
+  0% {
+    border-radius: 74% 26% 54% 46%/48% 45% 55% 52%;
+  }
+  25% {
+    border-radius: 48% 52% 39% 61%/50% 43% 57% 50%;
+  }
+  50% {
+    border-radius: 36% 64% 31% 69%/65% 50% 50% 35%;
+  }
+  75% {
+    border-radius: 57% 43% 38% 62%/60% 44% 56% 40%;
+  }
+  100% {
+    border-radius: 74% 26% 54% 46%/48% 45% 55% 52%;
+  }
+}
+@keyframes minidrop {
+  0% {
+    border-radius: 34% 66% 55% 45%/38% 60% 40% 62%;
+  }
+  25% {
+    border-radius: 33% 67% 65% 35%/50% 34% 66% 50%;
+  }
+  50% {
+    border-radius: 50% 50% 44% 56%/55% 47% 53% 45%;
+  }
+  75% {
+    border-radius: 55% 45% 54% 46%/66% 31% 69% 34%;
+  }
+  100% {
+    border-radius: 34% 66% 55% 45%/38% 60% 40% 62%;
+  }
+}
 .bubble-1 {
   height: 35rem;
   width: 35rem;
@@ -843,6 +877,70 @@
   bottom: 85%;
   right: 83%;
   transform: rotate(-240deg);
+}
+
+.board-music {
+  height: 80rem;
+  width: 100%;
+  position: relative;
+}
+
+.drop {
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0;
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+  background-color: rgb(1, 179, 255);
+  box-shadow: inset 4rem 4rem 4rem rgba(0, 0, 0, 0.07), 7rem 7rem 5rem rgba(1, 180, 255, 0.1), 7rem 9rem 5rem rgba(1, 180, 255, 0.1), inset -4rem -4rem 4rem rgba(255, 255, 255, 0.5);
+  animation-name: drop;
+  animation-delay: 0s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.drop__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 9rem;
+  color: white;
+  font-weight: bold;
+}
+
+.mini-drop {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0;
+  position: absolute;
+  animation-name: minidrop;
+  animation-delay: 0s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.mini-drop--red {
+  bottom: 5rem;
+  right: 15rem;
+  background-color: rgb(251, 37, 119);
+  box-shadow: inset 2rem 2rem 2rem rgba(0, 0, 0, 0.07), 3rem 3rem 3rem rgba(251, 37, 120, 0.1), 3rem 5rem 3rem rgba(251, 37, 120, 0.1), inset -2rem -2rem 2rem rgba(255, 255, 255, 0.5);
+}
+.mini-drop--green {
+  bottom: 10rem;
+  left: 5rem;
+  background-color: rgb(255, 233, 32);
+  box-shadow: inset 2rem 2rem 2rem rgba(0, 0, 0, 0.07), 3rem 3rem 3rem rgba(255, 234, 32, 0.1), 3rem 5rem 3rem rgba(255, 234, 32, 0.1), inset -2rem -2rem 2rem rgba(255, 255, 255, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */
