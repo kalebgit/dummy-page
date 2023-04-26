@@ -4,6 +4,7 @@ function iniciar(){
     try{
         document.querySelector("#hamburger").addEventListener('click', 
         hamburger, false);
+        
     }
 
     catch{

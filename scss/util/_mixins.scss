@@ -7,6 +7,14 @@
 
 }
 
+@mixin neon($color){
+    text-shadow: 
+        0 0 .01em white,
+        0 0 .3em $color,
+        0 0 .5em $color,
+        0 0 .7em $color;
+}
+
 //flexbox
 @mixin flex($direction, $wrap, $justify, $align-items,
 $align-content, $gap){

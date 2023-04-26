@@ -105,9 +105,18 @@
         </header>
 
         <main class="cont">
+            <section class="cont__board">
+                <h1 class="cont__board__title">Contacto</h1>
+                <span class="cont__board__text">
+                    Selecciona el tipo de comentario
+                    <p class="cont__board__text--small">
+                        (El formulario aparecerá debajo de la linterna)
+                    </p>
+                </span>
+            </section>
 
             <form class="cont__feedback">
-                <label for="feedback">
+                <label for="feedback" class="positive">
                     <img class="cont__feedback__image"
                         src="../media/gif/toad.gif"
                         alt="toad de mario bros">
@@ -164,6 +173,438 @@
                 </label>
 
             </form>
+
+            <section class="cont__forms">
+                <img class="cont__forms__lantern"
+                    src="../media/gif/minecraft-lantern.webp"
+                    alt="linterna de minecraft">
+                    
+                <div class="cont__forms__light"></div>
+
+                <!--CON JS APARECERAN DE ACUERDO A LA OPCION ELEGIDA-->
+
+                <div class="box-rainbow box-rainbow--fix">
+
+                    <form class="cont__forms__form cont__forms__form--fix">
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                                cont__forms__form__legend--fix ">
+                                Datos Personales
+                            </legend>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="text" name="first-name"
+                                    class="input input--fix"
+                                    required>
+
+                                <label class="label label--fix"
+                                    placeholder=" ">
+                                    Nombre(s)</label>
+
+                            </div>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="text" name="last-name"
+                                    class="input input--fix"
+                                    required>
+
+                                <label class="label label--fix"
+                                    placeholder=" ">
+                                    Apellidos</label>
+
+                            </div>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="email" name="mail"
+                                    class="input input--fix"
+                                    required>
+
+                                <label class="label label--fix"
+                                    placeholder=" ">
+                                    Correo electrónico</label>
+
+                            </div>
+    
+                        </fieldset>
+
+    
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                            cont__forms__form__legend--fix ">Optimizar</legend>
+
+
+                            <div class="select-container">
+                                <select name="fix" class="select-box
+                                select-box--fix">
+                                    <option  selected disabled>Tipo de optimización</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                </select>
+
+                                <span class="custom-arrow custom-arrow--fix"></span>
+                            </div>
+
+                                
+                            <div class="cont__forms__form__inputBox">
+
+                                
+
+                                <textarea placeholder=" " class="cont__forms__form__comment"
+                                    name="comment"></textarea>
+
+                                <label class="cont__forms__form__comment__label 
+                                cont__forms__form__comment__label--fix">
+                                    Agrega un comentario 
+                                    sobre tu optimización que ayudaría a la página
+                                </label>
+
+                            </div>
+
+
+
+                        </fieldset>
+
+                        <div class="cont__forms__form__buttonsBox">
+
+                            <input type="submit" value="Enviar" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__send-button
+                                cont__forms__form__buttonsBox__send-button--fix">
+                            <input type="reset" value="Reestablecer" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__reset-button
+                                cont__forms__form__buttonsBox__reset-button--fix">>
+
+                        </div>
+                        
+                        
+                    </form>
+
+                </div>
+
+
+                <!--//////////////////////////////////////////////////////////////////////-->
+
+                <div class="box-rainbow box-rainbow--positive">
+
+                    <form class="cont__forms__form cont__forms__form--positive">
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                                cont__forms__form__legend--positive ">
+                                Datos Personales
+                            </legend>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="text" name="first-name"
+                                    class="input input--positive"
+                                    required>
+
+                                <label class="label label--positive"
+                                    placeholder=" ">
+                                    Nombre(s)</label>
+
+                            </div>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="text" name="last-name"
+                                    class="input input--positive"
+                                    required>
+
+                                <label class="label label--positive"
+                                    placeholder=" ">
+                                    Apellidos</label>
+
+                            </div>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="email" name="mail"
+                                    class="input input--positive"
+                                    required>
+
+                                <label class="label label--positive"
+                                    placeholder=" ">
+                                    Correo electrónico</label>
+
+                            </div>
+    
+                        </fieldset>
+
+    
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                            cont__forms__form__legend--positive ">Positivo</legend>
+
+
+                            <!-- <div class="select-container">
+                                <select name="positive" class="select-box
+                                select-box--positive">
+                                    <option  selected disabled>Elige el tipo de optimización</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                </select>
+
+                                <span class="custom-arrow custom-arrow--fix"></span>
+                            </div> -->
+
+                                
+                            <div class="cont__forms__form__inputBox">
+
+                                
+
+                                <textarea placeholder=" " class="cont__forms__form__comment"
+                                    name="comment"></textarea>
+
+                                <label class="cont__forms__form__comment__label 
+                                cont__forms__form__comment__label--positive">
+                                    Escribe un comentario 
+                                </label>
+
+                            </div>
+
+
+
+                        </fieldset>
+
+                        <div class="cont__forms__form__buttonsBox">
+
+                            <input type="submit" value="Enviar" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__send-button
+                                cont__forms__form__buttonsBox__send-button--positive">
+                            <input type="reset" value="Reestablecer" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__reset-button
+                                cont__forms__form__buttonsBox__reset-button--positive">>
+
+                        </div>
+                        
+                        
+                    </form>
+
+                </div>
+
+                <!--//////////////////////////////////////////////////////////////////////-->
+
+
+                <div class="box-rainbow box-rainbow--negative">
+
+                    <form class="cont__forms__form cont__forms__form--negative">
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                                cont__forms__form__legend--negative ">
+                                Datos Personales
+                            </legend>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="text" name="first-name"
+                                    class="input input--negative"
+                                    required>
+
+                                <label class="label label--negative"
+                                    placeholder=" ">
+                                    Nombre(s)</label>
+
+                            </div>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="text" name="last-name"
+                                    class="input input--negative"
+                                    required>
+
+                                <label class="label label--negative"
+                                    placeholder=" ">
+                                    Apellidos</label>
+
+                            </div>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="email" name="mail"
+                                    class="input input--negative"
+                                    required>
+
+                                <label class="label label--negative"
+                                    placeholder=" ">
+                                    Correo electrónico</label>
+
+                            </div>
+    
+                        </fieldset>
+
+    
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                            cont__forms__form__legend--negative ">Negativo</legend>
+
+
+                            <!-- <div class="select-container">
+                                <select name="fix" class="select-box
+                                select-box--fix">
+                                    <option  selected disabled>Elige el tipo de optimización</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                </select>
+
+                                <span class="custom-arrow custom-arrow--fix"></span>
+                            </div> -->
+
+                                
+                            <div class="cont__forms__form__inputBox">
+
+                                
+
+                                <textarea placeholder=" " class="cont__forms__form__comment"
+                                    name="comment"></textarea>
+
+                                <label class="cont__forms__form__comment__label 
+                                cont__forms__form__comment__label--negative">
+                                    Agrega un comentario para saber la razón de tu inconformidad
+                                </label>
+
+                            </div>
+
+
+
+                        </fieldset>
+
+                        <div class="cont__forms__form__buttonsBox">
+
+                            <input type="submit" value="Enviar" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__send-button
+                                cont__forms__form__buttonsBox__send-button--negative">
+                            <input type="reset" value="Reestablecer" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__reset-button
+                                cont__forms__form__buttonsBox__reset-button--negative">>
+
+                        </div>
+                        
+                        
+                    </form>
+
+                </div>
+
+
+                <!--//////////////////////////////////////////////////////////////////////-->
+
+
+                <div class="box-rainbow box-rainbow--work">
+
+                    <form class="cont__forms__form cont__forms__form--work">
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                                cont__forms__form__legend--work ">
+                                Datos
+                            </legend>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="text" name="first-name"
+                                    class="input input--work"
+                                    required>
+
+                                <label class="label label--work"
+                                    placeholder=" ">
+                                    Empresa</label>
+
+                            </div>
+
+                            <div class="cont__forms__form__inputBox">
+
+                                <input type="email" name="mail"
+                                    class="input input--work"
+                                    required>
+
+                                <label class="label label--work"
+                                    placeholder=" ">
+                                    Correo electrónico</label>
+
+                            </div>
+    
+                        </fieldset>
+
+    
+                        <fieldset class="cont__forms__form__fieldset">
+                            <legend class="cont__forms__form__legend 
+                            cont__forms__form__legend--work ">Trabajo</legend>
+
+
+                            <div class="select-container">
+                                <select name="work" class="select-box
+                                select-box--work">
+                                    <option  selected disabled>Tipo de Trabajo</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                    <option>Lorem ipsum dolor sit</option>
+                                </select>
+
+                                <span class="custom-arrow custom-arrow--work"></span>
+                            </div>
+
+                                
+                            <div class="cont__forms__form__inputBox">
+
+                                
+
+                                <textarea placeholder=" " class="cont__forms__form__comment"
+                                    name="comment"></textarea>
+
+                                <label class="cont__forms__form__comment__label 
+                                cont__forms__form__comment__label--work">
+                                    Puedes darme más información escribiendo un comentario
+                                </label>
+
+                            </div>
+
+
+
+                        </fieldset>
+
+                        <div class="cont__forms__form__buttonsBox">
+
+                            <input type="submit" value="Enviar" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__send-button
+                                cont__forms__form__buttonsBox__send-button--work">
+                            <input type="reset" value="Reestablecer" 
+                                class=" cont__forms__form__button
+                                cont__forms__form__buttonsBox__reset-button
+                                cont__forms__form__buttonsBox__reset-button--work">>
+
+                        </div>
+                        
+                        
+                    </form>
+
+                </div>
+
+                
+
+            </section>
 
         </main>
 
