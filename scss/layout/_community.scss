@@ -226,7 +226,7 @@
         &__content{
             height: 0;
             width: 100%;
-            overflow: hidden;
+            overflow: scroll;
             
             
             display: grid;
@@ -285,7 +285,7 @@
         &:hover{
             width: 100%;
             height: 80rem;
-            //order: -1;
+            order: -1;
         }
         
         &:hover &__vertical__text{
