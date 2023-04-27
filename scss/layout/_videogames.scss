@@ -1,0 +1,253 @@
+@use '../util' as *;
+@use '../animation' as *;
+
+.vid{
+    margin-top: 3.5rem;
+    grid-template-areas: 
+    "title"
+    "divide"
+    "videogame";
+}
+
+.board-videogames{
+    grid-area: title;
+    position: relative;
+    height: 18rem;
+    padding: 2rem 2rem;
+    
+
+    //flex
+    @include flex(column, nowrap, flex-end, center,
+        center, .5rem);
+
+    //background
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 1) 80%), url("../media/img/halo.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    &__title{
+        @include title(3rem);
+        text-shadow: .1em .1em black;
+    }
+
+    &__text{
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.1rem;
+        color: white;
+        font-weight: normal;
+    }
+}
+
+.videogames-divide{
+    grid-area: divide;
+}
+
+.games{
+    grid-area: videogame;
+    width: 100%;
+
+    &__game{
+        height: 35rem;
+        width: 100%;
+        padding: 1rem;
+        position: relative;
+
+        @include flex(column, nowrap, flex-end, center,
+            center, 0);
+
+        //background
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to bottom, 
+            rgba(0, 0, 0, 0) 0%, 
+        rgba(0, 0, 0, 1) 70%);
+            z-index: 3
+        }
+
+        &__content{
+            position: relative;
+            padding: 1rem 1rem;
+            z-index: 3;
+            @include flex(column, nowrap, flex-start, center,
+                center, 1.5rem);
+
+            z-index: 4;
+        }
+
+        &__title{
+            position: relative;
+            top: 40%;
+
+            width: 70%;
+
+            
+            
+            
+            transition-property: all;
+            transition-delay: .7s;
+            transition-duration: .5s;
+            transition-timing-function: ease;
+        }
+
+        &__text{
+            font-family: 'Noto Sans', sans-serif;
+            font-size: .8rem;
+            color: white;
+            font-weight: normal;
+            text-align: center;
+
+            opacity: 0;
+
+            transition-property: all;
+            transition-delay: .2s;
+            transition-duration: .3s;
+            transition-timing-function: ease;
+        }
+
+        img{
+
+            object-fit: contain;
+            transition: all 1s;
+        }
+
+        
+
+        &:hover &__text{
+            opacity: 1;
+        }
+
+        &:hover &__title{
+            transform: scale(1.2) translate(0, 0);
+            top: 0%;
+        }
+
+        &:hover .resident__image{
+            opacity: 1;
+            top: 1rem;
+            
+        }
+
+        &:hover .god__image{
+            right: 1rem;
+            opacity: 1;
+        }
+
+        &:hover .minecraft__image{
+            bottom: 50%;
+            opacity: 1;
+        }
+
+        &:hover .overwatch__image{
+            top: 1rem;
+            opacity: 1;
+        }
+
+    }
+
+    .resident{
+        background-image: url("../media/img/resident-game.jpg");
+
+        &__image{
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            opacity: 0;
+            
+        }
+    }
+
+    .god{
+        background-image: url("../media/img/god-of-war-ambient.jpg");
+
+        &__image{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            opacity: 0;
+            
+        }
+    }
+
+    .minecraft{
+
+        background-image: url("../media/img/minecraft-ambient.png");
+
+
+        &__image{
+            height: 35%;
+            position: absolute;
+            bottom: 150%;
+            opacity: 0;
+            transition: all 1s;
+            
+        }
+
+        &__apple{
+            @include absolute-image(20%, 20%);
+            left: 0;
+            top: 0;
+            z-index: 4;
+        }   
+
+        &__bee{
+            @include absolute-image(20%, 20%);
+            top: 0;
+            right: 0;
+            
+            z-index: 4;
+        }
+    }
+
+    .overwatch{
+        background-image: url("../media/img/overwatch-ambient.webp");
+
+
+        &__image{
+            height: 60%;
+            top: 50%;
+            opacity: 0;
+            position: absolute;
+        }
+
+        &__sen{
+            @include absolute-image(20%, 20%);
+            right: 0;
+            bottom: -1rem;
+            transform: rotateZ(.10turn);
+            z-index: 4;
+        }
+
+        &__bridgite{
+            @include absolute-image(20%, 20%);
+            top: 0;
+            right: .5rem;
+            transform: rotateZ(.05turn);
+        }
+
+        &__dva-junk{
+            @include absolute-image(20%, 10rem);
+            bottom: -1.5rem;
+            left: 0;
+            transform: scale(.9);
+            z-index: 4;
+        }
+        
+        &__season{
+            @include absolute-image(20%, 20%);
+            bottom: 85%;
+            right: 83%;
+            transform: rotate(-240deg)
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use '../util' as *;
+
+.footer{
+    background-color: #F0F0F0;
+    padding: 1rem 2rem;
+    @include flex(row, nowrap, center, flex-start,
+        flex-start, 2rem);
+
+    &__title{
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+    }
+
+    &__social{
+        height: 2rem;
+        @include flex(row, wrap, flex-start, flex-start,
+            flex-start, 1rem);
+
+    }
+
+    &__icon{
+        height: 100%;
+    }
+
+    z-index: 100;
+}
