@@ -359,8 +359,9 @@
   gap: 0;
   height: 15rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../media/img/mexico-city.jpg");
-  background-size: contain;
-  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .summary {
@@ -606,7 +607,6 @@
   transition: all 1s;
 }
 .posts__post__vertical__sources {
-  display: none;
   opacity: 0;
   transition-property: display;
   transition-delay: 1s;
@@ -678,7 +678,6 @@
   opacity: 0;
 }
 .posts__post:hover .posts__post__vertical__sources {
-  display: block;
   opacity: 1;
 }
 .posts__post:hover .posts__post__content {
@@ -725,6 +724,7 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 80%), url("../media/img/halo.jpg");
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .board-videogames__title {
   font-family: "Dancing Script", cursive;
@@ -1179,7 +1179,7 @@
 
 .cont {
   margin-top: 3.5rem;
-  padding: 1rem 0;
+  padding: 5rem 0;
   background-color: #350048;
 }
 .cont__board {
@@ -1374,6 +1374,7 @@
 .cont__forms__form {
   background-color: #252525;
   padding: 1rem;
+  height: 100%;
   z-index: 3;
   position: relative;
   display: flex;
@@ -1749,6 +1750,339 @@
   }
   .main__title {
     font-size: 6rem;
+  }
+  .summary {
+    grid-template-areas: "music quote videogames" "community quote blog" "aside aside aside";
+    gap: 1rem;
+    place-items: start center;
+    padding: 5rem 0.5rem;
+  }
+  .bubble-1 {
+    height: 16rem;
+    width: 16rem;
+  }
+  .bubble__content {
+    max-height: 0rem;
+  }
+  .bubble__title {
+    font-size: 1.9rem;
+  }
+  .option__title {
+    font-size: 2.5rem;
+  }
+  .option__subtitle {
+    font-size: 1.2rem;
+  }
+  .board-community {
+    height: 25rem;
+  }
+  .board-community h2 {
+    font-size: 3.5rem;
+  }
+  .board-community__container__box {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .posts__post {
+    width: 10%;
+  }
+  .posts__post__vertical__img {
+    height: 3.7rem;
+    width: 3.7rem;
+  }
+  .posts__post:hover {
+    width: 50%;
+  }
+  .board-music {
+    height: 45rem;
+  }
+  .drop {
+    height: 24rem;
+    width: 24rem;
+  }
+  .drop__title {
+    font-size: 5rem;
+  }
+  .mini-drop {
+    height: 10rem;
+    width: 10rem;
+  }
+  .mini-drop__subtitle {
+    font-size: 1.8rem;
+  }
+  .events__title {
+    font-size: 3.5rem;
+  }
+  .events__grid__event__title {
+    font-size: 2rem;
+  }
+  .events__grid__event__content__date {
+    font-size: 1.3rem;
+  }
+  .events__grid__event__content__text {
+    font-size: 1rem;
+  }
+  .events__grid__event__content__artists__link {
+    height: 10rem;
+    width: 7rem;
+  }
+  .events__grid__event__content__artists__artist {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .events__grid__event__content__tickets {
+    width: 30%;
+    font-size: 1.2rem;
+  }
+  .cont__board__title {
+    font-size: 4rem;
+  }
+  .cont__board__text {
+    font-size: 2rem;
+  }
+  .cont__feedback {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .cont__feedback__image {
+    height: 10rem;
+  }
+  .cont__feedback__button {
+    height: 4rem;
+    width: 8rem;
+  }
+  .cont__feedback__button span {
+    font-size: 0.9rem;
+  }
+  .cont__forms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    gap: 3.5rem;
+  }
+  .cont__forms .box-rainbow {
+    width: 40%;
+  }
+  .board-videogames {
+    height: 35rem;
+  }
+  .board-videogames__title {
+    font-size: 6rem;
+  }
+  .board-videogames__text {
+    font-size: 1.5rem;
+  }
+  .games__game__content {
+    width: 50%;
+  }
+  .games__game__title {
+    top: 5rem;
+  }
+  .games__game__text {
+    font-size: 1rem;
+  }
+  .games__game:hover .games__game__title {
+    transform: scale(1.2);
+    top: 0rem;
+  }
+  .games__game:hover .resident__image {
+    opacity: 1;
+    top: 50%;
+    transform: scale(1.8);
+  }
+  .games__game:hover .god__image {
+    top: 40%;
+    right: 2%;
+    transform: scale(1.8);
+    opacity: 1;
+  }
+  .games__game:hover .minecraft__image {
+    left: 5%;
+    bottom: 20%;
+    opacity: 1;
+  }
+  .games__game:hover .overwatch__image {
+    top: 20%;
+    opacity: 1;
+  }
+  .games .resident {
+    background-image: url("../media/img/resident-game.jpg");
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    gap: 0;
+  }
+  .games .resident::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
+    z-index: 3;
+  }
+  .games .resident__image {
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    opacity: 1;
+  }
+  .games .god {
+    background-image: url("../media/img/god-of-war-ambient.jpg");
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    gap: 0;
+  }
+  .games .god::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
+    z-index: 3;
+  }
+  .games .god__image {
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    opacity: 1;
+  }
+  .games .minecraft {
+    background-image: url("../media/img/minecraft-ambient.png");
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    gap: 0;
+  }
+  .games .minecraft::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
+    z-index: 3;
+  }
+  .games .minecraft__image {
+    height: 50%;
+    position: absolute;
+    left: 100%;
+    bottom: 20%;
+    opacity: 1;
+    transition: all 1s;
+  }
+  .games .minecraft__apple {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    left: 0;
+    top: 0;
+    z-index: 4;
+  }
+  .games .minecraft__bee {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    top: 0;
+    right: 0;
+    z-index: 4;
+  }
+  .games .overwatch {
+    background-image: url("../media/img/overwatch-ambient.webp");
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    gap: 0;
+  }
+  .games .overwatch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%);
+    z-index: 3;
+  }
+  .games .overwatch__image {
+    height: 60%;
+    top: 50%;
+    right: 5%;
+    opacity: 0;
+    position: absolute;
+  }
+  .games .overwatch__sen {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    right: 0;
+    bottom: -1rem;
+    transform: rotateZ(0.1turn);
+    z-index: 4;
+  }
+  .games .overwatch__bridgite {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    top: 0;
+    right: 0.5rem;
+    transform: rotateZ(0.05turn);
+    z-index: 4;
+  }
+  .games .overwatch__dva-junk {
+    position: absolute;
+    height: 20%;
+    width: 10rem;
+    object-fit: contain;
+    bottom: 0;
+    left: 10%;
+    transform: scale(2);
+    z-index: 4;
+  }
+  .games .overwatch__season {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    bottom: 85%;
+    right: 83%;
+    transform: rotate(-240deg);
+    z-index: 4;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .games__game:hover .overwatch__image {
+    top: 10%;
+    opacity: 1;
+  }
+  .games .overwatch__image {
+    height: 80%;
   }
 }
 .btn {

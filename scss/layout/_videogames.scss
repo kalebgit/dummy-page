@@ -25,6 +25,7 @@
     rgba(0, 0, 0, 1) 80%), url("../media/img/halo.jpg");
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
 
     &__title{
         @include title(3rem);

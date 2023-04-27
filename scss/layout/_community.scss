@@ -198,7 +198,6 @@
             }
 
             &__sources{
-                display: none;
                 opacity: 0;
 
                 transition-property: display;
@@ -295,7 +294,6 @@
         }
 
         &:hover &__vertical__sources{
-            display: block;
             opacity: 1;
         }
 
