@@ -1383,7 +1383,7 @@
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 .cont__forms__form__fieldset {
   width: 100%;
@@ -1393,14 +1393,14 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 .cont__forms__form__legend {
   position: relative;
   width: max-content;
   font-family: "Dancing Script", cursive;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .cont__forms__form__legend::before {
   content: "";
@@ -1447,28 +1447,28 @@
 }
 .cont__forms__form__inputBox .label {
   position: absolute;
-  padding: 0 0.5rem;
+  padding: 0 0.2rem;
   pointer-events: none;
   left: 1.5rem;
-  top: 50%;
+  top: 30%;
   transform: translate(0, -50%);
   font-family: "Nunito", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.6em;
   color: #F6F1E9;
   z-index: 2;
   transition: all 0.5s;
 }
 .cont__forms__form__inputBox .input {
   outline: none;
-  padding: 0.5em 0.7em;
-  height: 3rem;
+  padding: 0.8em 0.8em;
+  height: 1.8rem;
   width: 100%;
   background-color: #252525;
-  border: 3px solid #F6F1E9;
+  border: 1px solid #F6F1E9;
   border-radius: 60px;
   transition: all 0.5s;
   color: #F6F1E9;
-  font-size: 1rem;
+  font-size: 0.8rem;
   /*
 
   Colores
@@ -1503,7 +1503,7 @@
   border-color: #F637EC;
 }
 .cont__forms__form__inputBox .input:valid ~ .label, .cont__forms__form__inputBox .input:focus ~ .label {
-  transform: translate(0, -3em);
+  transform: translate(0, -1.8em);
   background-color: #252525;
 }
 .cont__forms__form__inputBox .input:valid ~ .label--positive, .cont__forms__form__inputBox .input:focus ~ .label--positive {
@@ -1599,13 +1599,13 @@
 .cont__forms__form__comment {
   position: relative;
   resize: none;
-  height: 20rem;
+  height: 10rem;
   width: 100%;
   outline: none;
-  padding: 5rem 0.5rem 1rem 0.5rem;
+  padding: 3rem 0.5rem 1rem 0.5rem;
   background-color: #252525;
   border: 3px solid #F6F1E9;
-  border-radius: 40px;
+  border-radius: 10px;
   transition: all 0.5s;
   overflow: hidden;
   font-size: 0.8rem;
@@ -1621,15 +1621,15 @@
   padding: 0.5rem 1rem;
   background-color: #F6F1E9;
   color: #252525;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 .cont__forms__form__button {
   padding: 0.3em 0.5em;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 0.5em;
 }
 .cont__forms__form__buttonBox {
-  padding: 2rem 5rem;
+  padding: 0.5rem 5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1641,7 +1641,7 @@
 .cont .box-rainbow {
   width: 80%;
   position: relative;
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 .cont .box-rainbow::before {
   content: "";
@@ -1867,13 +1867,13 @@
     width: 40%;
   }
   .board-videogames {
-    height: 35rem;
+    height: 25rem;
   }
   .board-videogames__title {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .board-videogames__text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .games__game__content {
     width: 50%;

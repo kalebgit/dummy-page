@@ -284,7 +284,7 @@
             position: relative;
 
             @include flex(column, nowrap, flex-start, center, center,
-                3rem);
+                1.5rem);
             
 
             
@@ -293,7 +293,7 @@
                 width: 100%;
 
                 @include flex(column, nowrap, flex-start, flex-start, flex-start, 
-                3rem);
+                1.5rem);
             }
             
             &__legend{
@@ -303,7 +303,7 @@
                 //text
                 font-family: 'Dancing Script', cursive;
                 text-align: center;
-                font-size: 2rem;
+                font-size: 1.5rem;
 
                 &::before{
                     content: '';
@@ -343,7 +343,6 @@
 
                 &--fix{
                     color: #1eff45;
-
                     @include neon(#1eff45);
 
                     &::before{
@@ -368,15 +367,15 @@
 
                 .label{
                     position: absolute;
-                    padding: 0 .5rem;
+                    padding: 0 .2rem;
                     pointer-events: none;
                     left: 1.5rem;
-                    top: 50%;
+                    top: 30%;
                     transform: translate(0, -50%);
 
                     
                     font-family: 'Nunito', sans-serif;
-                    font-size: .8em;
+                    font-size: .6em;
                     color: #F6F1E9;
                     
                     z-index: 2;
@@ -389,17 +388,17 @@
                 .input{
                     // box model
                     outline: none;
-                    padding: .5em .7em;
-                    height: 3rem;
+                    padding: .8em .8em;
+                    height: 1.8rem;
                     width: 100%;
                     background-color: #252525;
-                    border: 3px solid #F6F1E9;
+                    border: 1px solid #F6F1E9;
                     border-radius: 60px;
                     transition: all .5s;
 
                     //text
                     color: #F6F1E9;
-                    font-size: 1rem;
+                    font-size: .8rem;
 
                     
 
@@ -460,7 +459,7 @@
 
                     &:valid ~ .label,
                     &:focus ~ .label{
-                        transform: translate(0, -3em);
+                        transform: translate(0, -1.8em);
                         background-color: #252525;
                     }
 
@@ -615,14 +614,14 @@
             &__comment{
                 position: relative;
                 resize: none;
-                height: 20rem;
+                height: 10rem;
                 width: 100%;
                 outline: none;
 
-                padding: 5rem .5rem 1rem .5rem;
+                padding: 3rem .5rem 1rem .5rem;
                 background-color: #252525;
                 border: 3px solid #F6F1E9;
-                border-radius: 40px;
+                border-radius: 10px;
                 transition: all .5s;
                 overflow: hidden;
 
@@ -646,7 +645,7 @@
                     //text
                     
                     color: #252525;
-                    font-size: .8rem;
+                    font-size: .6rem;
 
 
                 }
@@ -655,12 +654,12 @@
             &__button{
                 padding: .3em .5em;
                 
-                font-size: 1rem;
+                font-size: .8rem;
                 border-radius: .5em;
             }
 
             &__buttonBox{
-                padding: 2rem 5rem;
+                padding: .5rem 5rem;
                 @include flex(row, nowrap, center, flex-start, flex-start,
                     0);
 
@@ -691,7 +690,7 @@
     .box-rainbow{
         width: 80%;
         position: relative;
-        padding: .5rem;  
+        padding: .3rem;  
 
         &::before{
             content: '';
