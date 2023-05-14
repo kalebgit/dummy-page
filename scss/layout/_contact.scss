@@ -293,7 +293,7 @@
                 width: 100%;
 
                 @include flex(column, nowrap, flex-start, flex-start, flex-start, 
-                1.5rem);
+                1.8rem);
             }
             
             &__legend{
@@ -375,7 +375,7 @@
 
                     
                     font-family: 'Nunito', sans-serif;
-                    font-size: .6em;
+                    font-size: .8em;
                     color: #F6F1E9;
                     
                     z-index: 2;
@@ -388,8 +388,8 @@
                 .input{
                     // box model
                     outline: none;
-                    padding: .8em .8em;
-                    height: 1.8rem;
+                    padding: 1em .8em;
+                    height: 2.3rem;
                     width: 100%;
                     background-color: #252525;
                     border: 1px solid #F6F1E9;

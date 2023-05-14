@@ -265,6 +265,7 @@
 }
 .main__cardboard {
   width: 95%;
+  align-self: start;
   border-radius: 1em;
   gap: 0;
   background-color: #F0F0F0;
@@ -366,11 +367,52 @@
 
 .summary {
   display: grid;
-  grid-template-areas: "quote" "music" "videogames" "aside" "community" "blog";
+  grid-template-areas: "about" "divide" "quote" "music" "videogames" "aside" "community" "blog";
   place-items: center;
   place-content: center;
   gap: 2rem;
-  padding: 2rem 0.5rem;
+  padding: 0rem 0rem 0.5rem 0rem;
+}
+.summary__divide {
+  grid-area: divide;
+  width: 100%;
+}
+
+.about {
+  grid-area: about;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/img/pixel-art-city.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 0;
+}
+.about__img-ab {
+  height: 2.5rem;
+  width: 2.5rem;
+  object-fit: contain;
+}
+.about__img-profile {
+  width: 40%;
+  object-fit: cover;
+}
+.about__content {
+  padding: 1rem 1.5rem;
+  margin: 0 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1.3rem);
+  border: 5px solid white;
+  border-radius: 10px;
+}
+.about__title {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+.about__text {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-size: 0.8rem;
 }
 
 .quote {
@@ -437,7 +479,7 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgb(0, 0, 0) 70%), url("../media/img/rainworld.webp");
   background-size: cover;
 }
-.board-community h2 {
+.board-community h1 {
   font-family: "Dancing Script", cursive;
   font-size: 2.5rem;
   color: #B9EDDD;
@@ -1393,7 +1435,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 .cont__forms__form__legend {
   position: relative;
@@ -1453,15 +1495,15 @@
   top: 30%;
   transform: translate(0, -50%);
   font-family: "Nunito", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: #F6F1E9;
   z-index: 2;
   transition: all 0.5s;
 }
 .cont__forms__form__inputBox .input {
   outline: none;
-  padding: 0.8em 0.8em;
-  height: 1.8rem;
+  padding: 1em 0.8em;
+  height: 2.3rem;
   width: 100%;
   background-color: #252525;
   border: 1px solid #F6F1E9;
@@ -1695,6 +1737,16 @@
     height: 3.5rem;
     width: 3.5rem;
   }
+  .about__title {
+    font-size: 3rem;
+  }
+  .about__text {
+    font-size: 1rem;
+  }
+  .about__img-ab {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 @media screen and (min-width: 425px) {
   .board-community__container__box {
@@ -1709,7 +1761,10 @@
     width: 4.1rem;
   }
   .cont__forms__form__legend {
-    font-size: 2.7rem;
+    font-size: 2rem;
+  }
+  .about__title {
+    font-size: 4rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1751,15 +1806,35 @@
   .main__title {
     font-size: 6rem;
   }
+  .main__cardboard__content {
+    opacity: 1;
+    min-height: 13rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
   .summary {
-    grid-template-areas: "music quote videogames" "community quote blog" "aside aside aside";
-    gap: 1rem;
-    place-items: start center;
-    padding: 5rem 0.5rem;
+    grid-template-areas: "about about" "divide divide" "quote quote " "music videogames" "community blog" "aside aside";
+    gap: 2rem;
+  }
+  .about {
+    padding: 2rem;
+  }
+  .about__title {
+    font-size: 3rem;
+  }
+  .about__text {
+    font-size: 1rem;
+  }
+  .about__img-ab {
+    height: 3rem;
+    width: 3rem;
   }
   .bubble-1 {
-    height: 16rem;
-    width: 16rem;
+    height: 20rem;
+    width: 20rem;
   }
   .bubble__content {
     max-height: 0rem;
@@ -1776,7 +1851,7 @@
   .board-community {
     height: 25rem;
   }
-  .board-community h2 {
+  .board-community h1 {
     font-size: 3.5rem;
   }
   .board-community__container__box {
@@ -2083,6 +2158,197 @@
   }
   .games .overwatch__image {
     height: 80%;
+  }
+  .personal {
+    height: 20rem;
+  }
+  .main__divide__slide {
+    animation-duration: 5s;
+  }
+  .main__cardboard__title {
+    font-size: 3.5rem;
+    height: 6rem;
+  }
+  .main__cardboard__text {
+    font-size: 1rem !important;
+  }
+  .about {
+    padding: 5rem 20rem;
+  }
+  .about__title {
+    font-size: 4rem;
+  }
+  .about__text {
+    font-size: 1.5rem;
+  }
+  .about__img-ab {
+    height: 5rem;
+    width: 5rem;
+  }
+  .about__img-profile {
+    width: 28%;
+  }
+  .summary {
+    grid-template-areas: "about about about" "divide divide divide" "quote music videogames" "quote community blog" "aside aside aside";
+    gap: 2rem;
+  }
+  .bubble-1 {
+    height: 25rem;
+    width: 25rem;
+  }
+  .bubble__title {
+    font-size: 2.5rem;
+  }
+  .bubble__text {
+    font-size: 1.2rem;
+  }
+  .board-community h1 {
+    font-size: 5rem;
+  }
+  .board-community__container__box {
+    height: 6rem;
+    width: 6rem;
+  }
+  .option__title {
+    font-size: 3.5rem;
+  }
+  .option__subtitle {
+    font-size: 2rem;
+  }
+  .option label {
+    font-size: 1.5rem;
+  }
+  .option input {
+    transform: scale(1.5) translate(-0.1em, -0.05em);
+  }
+  .posts__post {
+    height: 30rem;
+    width: 25%;
+  }
+  .posts__post__vertical {
+    padding: 1rem;
+    width: 5rem;
+  }
+  .posts__post__vertical__img {
+    height: 4rem;
+    width: 4rem;
+  }
+  .posts__post__vertical__topics__img {
+    width: 3rem;
+  }
+  .posts__post__vertical__text {
+    display: none;
+  }
+  .posts__post__vertical__sources {
+    opacity: 1;
+    height: max-content;
+    overflow: hidden;
+  }
+  .posts__post__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    gap: 0.5rem;
+  }
+  .posts__post__content__title {
+    opacity: 1;
+    font-size: 2rem;
+  }
+  .posts__post__content__text {
+    opacity: 1;
+    font-size: 1.1rem;
+  }
+  .posts__post:hover {
+    width: 25%;
+    order: initial;
+  }
+  .cont {
+    margin-top: 0;
+  }
+  .cont__board__title {
+    font-size: 4rem;
+  }
+  .cont__feedback__image {
+    height: 25vh;
+  }
+  .cont__feedback__button {
+    height: 7rem;
+    width: 14rem;
+  }
+  .cont__feedback__button span {
+    font-size: 1.5rem;
+  }
+  .cont__forms__lantern {
+    transform: scale(1.7);
+  }
+  .cont__forms__form__legend {
+    font-size: 2rem;
+  }
+  .cont .box-rainbow {
+    width: 20%;
+  }
+  .board-music {
+    height: 95vh;
+  }
+  .drop {
+    height: 45rem;
+    width: 45rem;
+  }
+  .drop__title {
+    font-size: 9rem;
+  }
+  .mini-drop {
+    height: 19rem;
+    width: 19rem;
+  }
+  .mini-drop__subtitle {
+    font-size: 3rem;
+  }
+  .mini-drop--red {
+    bottom: 5rem;
+    right: 5rem;
+  }
+  .mini-drop--yellow {
+    left: 7rem;
+    bottom: 5rem;
+  }
+  .mini-drop--green {
+    top: 5rem;
+    right: 8rem;
+  }
+  .events__title {
+    font-size: 4.5rem;
+  }
+  .events__grid {
+    padding: 0.5rem 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 30%));
+    gap: 2rem;
+  }
+  .events__grid__event {
+    padding: 2.5rem 2rem;
+  }
+  .events__grid__event__title {
+    font-size: 2.5rem;
+  }
+  .events__grid__event__content__date {
+    font-size: 1.3rem;
+  }
+  .events__grid__event__content__text {
+    font-size: 1.2rem;
+  }
+  .events__grid__event__content__artists__link {
+    height: 10rem;
+    width: 7rem;
+  }
+  .events__grid__event__content__artists__artist {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .events__grid__event__content__tickets {
+    width: 50%;
+    font-size: 1.2rem;
   }
 }
 .btn {

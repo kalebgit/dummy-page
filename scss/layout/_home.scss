@@ -22,6 +22,8 @@
     //grid
     display: grid;
     grid-template-areas:
+    "about"
+    "divide"
     "quote"
     "music"
     "videogames"
@@ -33,9 +35,63 @@
 
     gap: 2rem;
 
-    padding: 2rem .5rem;
+    padding: 0rem 0rem .5rem 0rem;
     
+    &__divide{
+        grid-area: divide;
+        width: 100%;
+    }
+}
 
+.about{
+    grid-area: about;
+
+    // background-color: #D8D8D8;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url("../media/img/pixel-art-city.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 0;
+
+    &__img-ab{
+        height: 2.5rem;
+        width: 2.5rem;
+        object-fit: contain;
+    }
+
+    &__img-profile{
+        width: 40%;
+        object-fit: cover;
+    }
+
+    &__content{
+        padding: 1rem 1.5rem;
+        margin: 0 2rem;
+
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(1.3rem);
+        border: 5px solid white;
+        border-radius: 10px;
+    }
+
+    &__title{
+
+
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+
+        color: white;
+
+    }
+
+    &__text{
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: .8rem;
+    }
 }
 
 .quote{

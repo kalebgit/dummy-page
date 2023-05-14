@@ -37,7 +37,7 @@
     rgba(0, 0, 0, 1) 70%), url("../media/img/rainworld.webp");
     background-size: cover;
 
-    h2{
+    h1{
         @include title(2.5rem);
         text-shadow: .1em .1em black;
     }

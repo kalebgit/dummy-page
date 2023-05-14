@@ -10,6 +10,21 @@
             
         }
     }
+
+    .about{
+        &__title{
+            font-size: 3rem;
+        }
+
+        &__text{
+            font-size: 1rem;
+        }
+
+        &__img-ab{
+            height: 3rem;
+            width: 3rem;
+        }
+    }
 }
 
 
@@ -37,7 +52,13 @@
     }
 
     .cont__forms__form__legend{
-        font-size: 2.7rem
+        font-size: 2rem
+    }
+
+    .about{
+        &__title{
+            font-size: 4rem;
+        }
     }
 }
 
@@ -85,24 +106,61 @@
         &__title{
             font-size: 6rem;
         }
+
+        &__cardboard{
+
+            &__content{
+                opacity: 1;
+                min-height: 13rem;
+                padding: 1rem;
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            
+            
+        }
     }
 
     .summary{
         grid-template-areas: 
-        "music quote videogames"
-        "community quote blog"
-        "aside aside aside";
+        "about about"
+        "divide divide"
+        "quote quote "
+        "music videogames"
+        "community blog"
+        "aside aside";
         
-        gap: 1rem;
+        gap: 2rem;
 
-        place-items: start center;
+    }
 
-        padding: 5rem .5rem;
+    .about{
+
+        padding: 2rem;
+        &__title{
+            font-size: 3rem;
+        }
+
+        &__text{
+            font-size: 1rem;
+        }
+
+        &__img-ab{
+            height: 3rem;
+            width: 3rem;
+        }
+
+        &__img-profile{
+            
+        }
     }
 
     .bubble-1{
-        height: 16rem;
-        width: 16rem;
+        height: 20rem;
+        width: 20rem;
     }
 
     .bubble{
@@ -132,7 +190,7 @@
     }
     .board-community{
         height: 25rem;
-        h2{
+        h1{
             font-size: 3.5rem;
         }
         &__container{
@@ -544,5 +602,324 @@
         }
     }
 
+    .personal{
+        height: 20rem;
+    }
+
+    .main{
+
+        &__divide{
+
+            &__slide{
+                animation-duration: 5s;
+            }
+        }
+
+
+        &__cardboard{
+
+            &__title{
+                font-size: 3.5rem;
+                height: 6rem;
+            }
+
+            &__text{
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    .about{
+
+        padding: 5rem 20rem;
+        &__title{
+            font-size: 4rem;
+        }
+
+        &__text{
+            font-size: 1.5rem;
+        }
+
+        &__img-ab{
+            height: 5rem;
+            width: 5rem;
+        }
+
+        &__img-profile{
+            width: 28%;
+        }
+    }
+
+    .summary{
+        grid-template-areas: 
+        "about about about"
+        "divide divide divide"
+        "quote music videogames"
+        "quote community blog"
+        "aside aside aside";
+        
+        gap: 2rem;
+
+    }
+
+    .bubble-1{
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .bubble{
+        &__title{
+            font-size: 2.5rem;
+        }
+
+        &__text{
+            font-size: 1.2rem;
+        }
+    }
+
+    .board-community{
+
+        h1{
+            font-size: 5rem;
+        }
+
+        &__container{
+
+            &__box{
+                height: 6rem;
+                width: 6rem;
+            }
+        }
+    }
+
+    .option{
+
+        &__title{
+            font-size: 3.5rem;
+        }
+
+        &__subtitle{
+            font-size: 2rem;
+        }
+
+        label{
+            font-size: 1.5rem;
+        }
+
+        input{
+            transform: scale(1.5) translate(-.1em, -.05em);
     
+        }
+    }
+
+    .posts{
+
+        &__post{
+            height: 30rem;
+            width: 25%;
+
+            &__vertical{
+                padding: 1rem;
+                width: 5rem;
+
+                &__img{
+                    height: 4rem;
+                    width: 4rem;
+
+                }
+                
+                &__topics{
+
+                    &__img{
+                        width: 3rem;
+                    }
+                }
+
+                &__text{
+                    display: none;
+                }
+
+                &__sources{
+                    opacity: 1;
+                    height: max-content;
+                    overflow: hidden;
+                }
+            }
+
+            &__content{
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: start;
+                gap: .5rem;
+
+                &__title{
+                    opacity: 1;
+                    font-size: 2rem;
+    
+                }
+    
+                &__text{
+
+                    opacity: 1;
+    
+                    //text
+                    font-size: 1.1rem;
+                    
+                }
+            }
+
+            &:hover{
+                width: 25%;
+                order: initial;
+            }
+        }
+
+    }
+
+
+    .cont{
+        margin-top: 0;
+
+        &__board{
+
+
+            &__title{
+                font-size: 4rem;
+            }
+
+            &__text{
+
+            }
+        }
+
+        &__feedback{
+
+            &__image{
+                height: 25vh;
+            }
+
+            &__button{
+                height: 7rem;
+                width: 14rem;
+
+                span{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &__forms{
+            
+
+            &__lantern{
+                transform: scale(1.7);
+            }
+
+            &__form{
+                
+                &__legend{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .box-rainbow{
+            width: 20%;
+        }
+    }
+
+
+
+
+
+    .board-music{
+        height: 95vh;
+        
+    }
+    .drop{
+        height: 45rem;
+        width: 45rem;
+
+        &__title{
+            font-size: 9rem;
+        }
+    }
+
+    .mini-drop{
+        height: 19rem;
+        width: 19rem;
+
+        &__subtitle{
+            font-size: 3rem;
+        }
+
+        &--red{
+            bottom: 5rem;
+            right: 5rem;
+        }
+
+        &--yellow{
+            left: 7rem;
+            bottom: 5rem;
+        }
+
+        &--green{
+            top: 5rem;
+            right: 8rem
+        }
+    }
+
+    .events{
+
+        &__title{
+            font-size: 4.5rem;
+        }
+
+        &__grid{
+            padding: .5rem 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(5rem, 30%));
+            gap: 2rem;
+
+            &__event{
+                padding: 2.5rem 2rem;
+
+                &__title{
+                    font-size: 2.5rem;
+                }
+
+                &__content{
+
+                    &__date{
+                        font-size: 1.3rem;
+                    }
+
+                    &__text{
+                        font-size: 1.2rem;
+                    }
+
+                    &__artists{
+
+
+                        &__link{
+                            height: 10rem;
+                            width: 7rem;
+                        }
+
+                        &__artist{
+                            height: 3.5rem;
+                            width: 3.5rem;
+                        }
+                    }
+
+                    &__tickets{
+                        width: 50%;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
 }

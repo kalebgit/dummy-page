@@ -53,10 +53,13 @@
 
     &__cardboard{
         width: 95%;
+        align-self: start;
         border-radius: 1em;
         gap: 0;
         background-color: #F0F0F0;
         overflow: hidden;
+
+        
 
         &__content{
             opacity: 0;
@@ -72,6 +75,8 @@
             opacity: 1;
             padding: 1rem;
             max-height: 30rem;
+
+            
         }
 
 
